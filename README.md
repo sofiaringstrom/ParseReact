@@ -1,4 +1,4 @@
-# Parse + React
+# Parse + React 
 
 Seamlessly bringing Parse data into your React applications.
 

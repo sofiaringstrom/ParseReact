@@ -1,6 +1,6 @@
 {
   "name": "parse-react-sofia",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Use Parse data in React applications",
   "homepage": "https://github.com/sofiaringstrom/ParseReact",
   "keywords": [

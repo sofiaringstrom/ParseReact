@@ -14,7 +14,7 @@ var path = require('path');
 
 var pkg = require('./package.json');
 
-var BUILD = process.env.REACT_NATIVE ? 'react-native' : 'browser';
+var BUILD = 'browser';
 
 function versionHeader() {
   return (
@@ -57,9 +57,6 @@ function fullHeader() {
 // Compile ES6 + Flow source into ES5 code for the npm package
 gulp.task('lib', function() {
   var stream = gulp.src('./src/*.js').pipe(babel());
-  if (process.env.REACT_NATIVE) {
-    stream = stream.pipe(replace(/require\('parse'\)/g, "require('parse/react-native')"));
-  }
   return stream.pipe(gulp.dest(path.join('lib', BUILD)));
 });
 

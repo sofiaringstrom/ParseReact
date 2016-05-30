@@ -2,7 +2,7 @@
   "name": "parse-react-sofia",
   "version": "0.5.1",
   "description": "Use Parse data in React applications",
-  "homepage": "https://github.com/ParsePlatform/ParseReact",
+  "homepage": "https://github.com/sofiaringstrom/ParseReact",
   "keywords": [
     "parse",
     "react",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ParsePlatform/ParseReact"
+    "url": "https://github.com/sofiaringstrom/ParseReact"
   },
   "bugs": "https://github.com/ParsePlatform/ParseReact/issues",
   "files": [

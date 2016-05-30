@@ -142,6 +142,19 @@ function pushUpdates(
     });
     return null;
   }
+
+  // Hacking in id in latest if it doesn't exist
+  if(changes.latest.id == undefined) {
+    changes.latest.id = changes.id;
+  }
+  if(changes.latest.id.className == undefined) {
+    if(changes.className !== undefined) {
+      changes.latest.id.className = changes.className;
+    } else if(changes.id.className !== undefined) {
+      changes.latest.id.className = changes.id.className;
+    }
+  }
+  
   // For all current subscribers, check if the object still matches the query.
   // Then, using the changed keys, find any queries we might now match.
   var visited = {};

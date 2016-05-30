@@ -44,7 +44,7 @@
   },
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "postinstall": "gulp"
+    "prepublish": "gulp"
   },
   "jest": {
     "rootDir": "src",

@@ -62,7 +62,8 @@ gulp.task('lib', function() {
   //}
   return stream.pipe(gulp.dest(path.join('lib', BUILD)));*/
   gulp.src('./src/*.js')
-  .pipe(gulp.dest(path.join('lib', BUILD)));
+  .pipe(gulp.dest('.lib/browser'));
+  process.stdout.write('running lib task');
 });
 
 // Build the concatentated and compressed files for CDN and download

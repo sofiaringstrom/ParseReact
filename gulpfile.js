@@ -56,8 +56,13 @@ function fullHeader() {
 
 // Compile ES6 + Flow source into ES5 code for the npm package
 gulp.task('lib', function() {
-  var stream = gulp.src('./src/*.js').pipe(babel());
-  return stream.pipe(gulp.dest(path.join('lib', BUILD)));
+  /*var stream = gulp.src('./src/*.js').pipe(babel());
+  //if (process.env.REACT_NATIVE) {
+  //  stream = stream.pipe(replace(/require\('parse'\)/g, "require('parse/react-native')"));
+  //}
+  return stream.pipe(gulp.dest(path.join('lib', BUILD)));*/
+  gulp.src('./src/*.js')
+  .pipe(gulp.dest(path.join('lib', BUILD)));
 });
 
 // Build the concatentated and compressed files for CDN and download
